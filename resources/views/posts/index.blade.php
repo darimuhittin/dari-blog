@@ -28,4 +28,6 @@
             </div>
         @endif
     </div>
+
+    {{ $posts->links() }}
 </x-layout>

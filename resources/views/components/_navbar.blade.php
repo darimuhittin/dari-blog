@@ -1,9 +1,7 @@
 <div class="flex text-xl bg-gray-800 shadow-lg mb-24 ">
-    <div class=" text-white text-shadow-md float-left my-auto ml-4 pr-6">
-        BLOG
-    </div>
+    <a href="/" class="text-white text-shadow-md float-left my-auto ml-4 pr-6">BLOG</a>
     <div class="mr-auto ml-4 flex">
-
+{{--
         <ul class="mx-auto flex items-center text-white text-center">
             <li class="hover:bg-gray-200 cursor-pointer  w-40 flex hover:text-black">
                 <a class="mx-auto h-full w-full px-2 py-2" href="/">Home</a>
@@ -14,7 +12,7 @@
             <li class="hover:bg-gray-200 cursor-pointer  w-40 flex hover:text-black">
                 <a class="mx-auto h-full w-full px-2 py-2" href="#">Me</a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 
 
@@ -26,12 +24,10 @@
                     alt="" srcset="">
                 </li>
                 <x-slot name="items">
-                    <x-admin.dropdown-item :active="request()->is('/admin/posts')" title="All Posts" href="/admin/posts" />
+                    <x-admin.dropdown-item :active="request()->is('admin/posts')" title="All Posts" href="/admin/posts" />
 
+                    <x-admin.dropdown-item :active="request()->is('admin/posts/create')" title="New Post" href="/admin/posts/create" />
 
-                    <li class="">
-                        <a href="#" class="block hover:bg-blue-400 px-4 py-1 w-full">New Post</a>
-                    </li>
 
                     <li class="">
                         <a href="#" class="text-left block hover:bg-blue-400 px-4 py-1 w-full" x-data="{}"

@@ -10,10 +10,11 @@
     <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 min-h-screen relative">
 
     @include('components._navbar')
     {{ $slot }}
 
+    @include('components._footer')
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>

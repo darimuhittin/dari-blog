@@ -40,4 +40,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/logout', [SessionController::class, 'destroy']);
 
 Route::get('/admin/posts', [AdminPostController::class, 'index']);
-Route::get('/admin/posts/{post:id}/edit',[AdminPostController::class,'edit'])
+Route::get('/admin/posts/{post:id}/edit', [AdminPostController::class, 'edit']);
+Route::patch('/admin/posts/{post:id}', [AdminPostController::class, 'update']);
+Route::get('/admin/posts/create', [AdminPostController::class, 'create']);
+Route::post('/admin/posts/store', [AdminPostController::class, 'store']);

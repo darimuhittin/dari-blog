@@ -1,5 +1,5 @@
 @props(['items'])
-<div x-data="{open: true}" class="relative text-white">
+<div x-data="{open: false}" class="relative text-white">
     <button @click="open=!open" {{ $attributes->merge(['class' => 'relative  min-w-48 flex items-center']) }}>
         {{ $slot }}
         <i class="pl-4 right-0 bottom-0 ml-auto fas fa-chevron-down"></i>
